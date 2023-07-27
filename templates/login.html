@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <ul class="navbar">
+      {% if not is_logged_in %}
+      <li><a href="login">Login</a></li>
+      {% endif %}
+      <li><a href="game">Game</a></li>
+      <li><a href="rankings">Rankings</a></li>
+    </ul>
+    {% if not is_logged_in %}
+    <div class="login-container">
+      <h1>Login</h1>
+      <form action="/" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Login</button>
+      </form>
+      {% if error %}
+      <p class="error">{{ error }}</p>
+      {% endif %}
+      <p>You must be logged in to save your score. Don't have an account? <a href="/register">Register here</a>.</p>
+    </div>
+    {% else %}
+    <div class="login-container">
+      <p class="success">You are already logged in.</p>
+      <p>Continue to the <a href="/game">game</a>.</p>
+    </div>
+    {% endif %}
+  </body>
+</html>

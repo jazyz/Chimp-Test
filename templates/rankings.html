@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <ul class="navbar">
+      {% if not is_logged_in %}
+      <li><a href="login">Login</a></li>
+      {% endif %}
+      <li><a href="game">Game</a></li>
+      <li><a href="rankings">Rankings</a></li>
+
+      {% if is_logged_in %}
+      <li class="logout-btn">
+        <form action="{{ url_for('logout') }}" method="post">
+          <input type="submit" value="Logout" />
+        </form>
+      </li>
+      {% endif %}
+    </ul>
+
+    <div class="leaderboard-container">
+      <h1>Leaderboard</h1>
+      <table>
+        <tr>
+          <th>Rank</th>
+          <th>Username</th>
+          <th>Score</th>
+          <th>Date</th>
+        </tr>
+        {% for rank, username, score, end_time in ranked_data %}
+        <tr>
+          <td>{{ rank }}</td>
+          <td>{{ username }}</td>
+          <td>{{ score }}</td>
+          <td>{{ end_time }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

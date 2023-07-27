@@ -1,0 +1,164 @@
+.titleScreen {
+  font-size: 100px;
+  text-align: center;
+  color: #4287f5;
+}
+
+#grid {
+  height: 540px;
+  width: 800px;
+  margin: auto;
+  background-color: #4287f5;
+}
+.empty {
+  float: left;
+  width: 54px;
+  height: 54px;
+  border: 3px solid #4287f5;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24pt;
+  color: white;
+}
+
+.login-container {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.login-container h2 {
+  text-align: center;
+  color: #4287f5;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.login-container input {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.login-container button {
+  padding: 10px;
+  background-color: #4287f5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #1d5fc4;
+}
+
+.login-container .error {
+  color: red;
+  text-align: center;
+}
+
+.login-container p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-container a {
+  color: #4287f5;
+}
+
+.login-container a:hover {
+  color: #1d5fc4;
+}
+
+.leaderboard-container {
+  margin: 20px;
+}
+
+.leaderboard-container h1 {
+  text-align: center;
+}
+
+.leaderboard-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.leaderboard-container th,
+.leaderboard-container td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-container th {
+  background-color: #f2f2f2;
+}
+
+.leaderboard-container tr:hover {
+  background-color: #f5f5f5;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.navbar li {
+  float: left;
+}
+
+ul.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.navbar li a:hover {
+  background-color: #111;
+}
+
+ul.navbar li.logout-btn {
+  float: right;
+}
+
+ul.navbar li.logout-btn form {
+  display: inline;
+}
+
+ul.navbar li.logout-btn input[type="submit"] {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul.navbar li.logout-btn input[type="submit"]:hover {
+  background-color: #d32f2f;
+}
