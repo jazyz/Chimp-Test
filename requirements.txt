@@ -1,0 +1,7 @@
+secrets
+datetime
+Flask==2.3.2
+flask-migrate==4.0.4
+Flask-SQLAlchemy==3.0.5
+passlib==1.7.4
+bcrypt==4.0.1
