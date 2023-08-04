@@ -57,7 +57,6 @@ function startLvl(x) {
 
 function sendRanking() {
   console.log(is_logged_in);
-  console.log(username);
   if (is_logged_in !== "True") {
     return;
   }
@@ -67,7 +66,7 @@ function sendRanking() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ user: username, score: score }),
+    body: JSON.stringify({ score: score }),
   })
     .then(() => {
       console.log("Ranking submitted successfully");
