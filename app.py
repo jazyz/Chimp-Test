@@ -67,9 +67,8 @@ def logout():
 
 @app.route("/rankings", methods=["POST"])
 def saveRanking():
-    user = request.json.get("user")
     score = request.json.get("score")
-    ranking = Ranking(user=user, score=score, end_time=datetime.utcnow())
+    ranking = Ranking(user=session.get("username"), score=score, end_time=datetime.utcnow())
     with app.app_context():
         db.session.add(ranking)
         db.session.commit()
